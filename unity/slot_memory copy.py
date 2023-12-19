@@ -10,9 +10,8 @@ from langchain.memory.entity import BaseEntityStore, InMemoryEntityStore
 from langchain.memory.utils import get_prompt_input_key
 from langchain.prompts.base import BasePromptTemplate
 from langchain.schema import BaseMessage, get_buffer_string
+from prompt import SLOT_EXTRACTION_PROMPT
 from pydantic import Field
-
-from app.prompt import SLOT_EXTRACTION_PROMPT
 
 
 class SlotMemory(BaseChatMemory):
@@ -27,6 +26,7 @@ class SlotMemory(BaseChatMemory):
     default_slots = {
         "symptoms": "null",
         "duration": "null",
+        "menstrual_history": "null",
         "past_medical_history": "null",
     }
     current_slots = copy.deepcopy(default_slots)
