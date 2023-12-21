@@ -9,7 +9,7 @@ packages = [{include = "slot_filling"}]
 [tool.poetry.dependencies]
 python = "3.11.3"
 numpy = "^1.24.2"
-gradio = "^3.24.1"
+gradio = "^4.11.0"
 langchain = "^0.0.292"
 openai = "^0.28.0"
 
