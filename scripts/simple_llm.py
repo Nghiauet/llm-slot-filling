@@ -1,8 +1,16 @@
+import time as times
+
 from langchain.llms import OpenAI
 
-llm = OpenAI(temperature=0.7)
+start = times.time()
+llm = OpenAI(
+    streaming=True,
+    temperature=0.7,
+)
 
-text = "NFTの使用用途としてどんなものが考えられますか。"
+text = "Hướng dẫn các bước xây dựng một chatbot realtime"
 
 prediction = llm(text)
+end = times.time()
 print(prediction.strip())
+print(f"Time: {end - start}")

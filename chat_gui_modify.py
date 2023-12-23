@@ -4,7 +4,7 @@ from langchain.chat_models import ChatOpenAI
 from app.slot_filling_conversation import SlotFilling
 from app.slot_memory import SlotMemory
 
-llm = ChatOpenAI(temperature=0.7)
+llm = ChatOpenAI(temperature=0.2)
 memory = SlotMemory(llm=llm)
 print("Loading...")
 slot_filling = SlotFilling(llm=llm, memory=memory)

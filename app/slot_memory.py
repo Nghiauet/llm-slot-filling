@@ -28,6 +28,7 @@ class SlotMemory(BaseChatMemory):
         "symptoms": "null",
         "duration": "null",
         "past_medical_history": "null",
+        "has_seen_doctor": "null",
     }
     current_slots = copy.deepcopy(default_slots)
     entity_store: BaseEntityStore = Field(default_factory=InMemoryEntityStore)
